@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Georgia", serif;
+  
+  --color-gold: #C5A059;
+  --color-dark: #050505;
+  --color-glass: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-text-dim: #888888;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans antialiased min-h-screen relative overflow-x-hidden;
+  }
+}
+
+.bg-mesh {
+  @apply fixed inset-0 z-[-1];
+  background: radial-gradient(circle at 80% 20%, #1a1510 0%, transparent 40%), 
+              radial-gradient(circle at 20% 80%, #0d121a 0%, transparent 40%);
+}
+
+.frosted-glass {
+  @apply bg-glass backdrop-blur-2xl border border-glass-border;
+}
+
+.text-luxury-title {
+  @apply font-serif font-light tracking-tight;
+}
+
+.micro-label {
+  @apply text-[10px] uppercase tracking-[0.2em] font-medium text-text-dim;
+}
+
+.thin-border {
+  @apply border border-glass-border;
+}
